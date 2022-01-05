@@ -140,7 +140,7 @@ class HospitalRepository
 
     public function allHospitalForAdmin($per_page)
     {
-        return Hospital::paginate($per_page);
+        return Hospital::latest()->paginate($per_page);
 
     }
 

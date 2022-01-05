@@ -47,9 +47,9 @@ class AdminHospitalController extends BaseController
     {
         $this->hospitalRepository->createByAdmin($request);
         $this->notifySuccess('Hospital Created Successfully!');
-        return redirect()->back();
-        $this->notifyError('Something Went Wrong!');
-        return redirect()->back();
+        return redirect()->route('admin.hospital.index');
+        // $this->notifyError('Something Went Wrong!');
+        // return redirect()->back();
     }
 
     public function show($id)

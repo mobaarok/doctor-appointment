@@ -1,37 +1,32 @@
-@extends('admin/layout/master') @section('content')
+@extends('admin/admin_layout/master') @section('content')
 
-<div class="main-content">
-    <div class="container-fluid">
-
-        {{-- Page Header && Breadcrumb Start --}}
-        <div class="page-header">
-            <div class="row align-items-end">
-                <div class="col-lg-8">
-                    <div class="page-header-title">
-                        <i class="ik ik-align-right bg-secondary"></i>
-                        <div class="d-inline">
-                            <h5>Hospital Details</h5>
-                            <span>details of a hospital.</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <nav class="breadcrumb-container" aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item">
-                                <a href="{{ route('admin.dashboard') }}"><i class="ik ik-home"></i></a>
-                            </li>
-                            <li class="breadcrumb-item">
-                                <a href="{{ route('admin.hospital.index') }}">Hospital</a>
-                            </li>
-                            <li class="breadcrumb-item active" aria-current="page">Details</li>
-                        </ol>
-                    </nav>
-                </div>
-            </div>
+<div class="page-title mb-3">
+    <div class="row">
+        <div class="col-12 col-md-6 order-md-1 order-last">
+            <h3>Hospitals Details</h3>
         </div>
-        {{-- Page Header && Breadcrumb end --}}
+        <div class="col-12 col-md-6 order-md-2 order-first">
+            <nav
+                aria-label="breadcrumb"
+                class="breadcrumb-header float-start float-lg-end"
+            >
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="{{ route('admin.dashboard') }}">Dashboard</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="{{ route('admin.hospital.index') }}">Hospital</a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">
+                        Details
+                    </li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</div>
 
+<section class="section">
         <div class="row">
             <div class="col-md-12">
                 <div class="card" style="min-height: 400px">
@@ -88,12 +83,6 @@
             @endforeach
             <!-- Single Card End -->
         </div>
-
-
-
-
-    </div>
-</div>
 
 
 @endsection
