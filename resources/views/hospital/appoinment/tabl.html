@@ -1,0 +1,32 @@
+
+    <tr>
+        <td class="text-bold-500">1</td>
+        <td class="text-bold-500 fw-bold">
+            <a href="single-doctor.html">Sarmin Rahman</a>
+        </td>
+        <td>01634559896</td>
+        <td>
+            <div class="badge bg-light-danger "> local </div>
+
+        </td>
+        <td class="text-bold-500">
+         <div class="isdone">
+            <span class="badge bg-light-danger float-start"> No </span>
+            <div class="form-check form-switch float-start">
+                <input class="form-check-input visited " type="checkbox"
+                    id="flexSwitchCheckDefault" >
+            </div>
+         </div>
+        </td>
+    </tr>
+
+<script>
+         $("tbod").append('<tr> \
+                        <td>' + sl++ + '</td> \
+                        <td>' + item.patient_name + '</td> \
+                        <td>' + item.patient_phone + '</td> \
+                        <td> \
+                         <button type="button" class="complete btn btn-sm  '+ cls +' " data-bookingid='  + item.id +' '+ isDisabled +'> '+ isChecked +' </button>\
+                        <td> <span class="badge '+ serialCls +' ">' + serialType +  '</span> </td> \
+                         </tr>');
+</script>

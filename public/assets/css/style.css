@@ -1,0 +1,17 @@
+body {
+    background: #F0F2F5;
+}
+
+a.style-link{
+     text-decoration: none;
+     color: #161515;
+
+ }
+
+  /* home page */
+  .btn-search {
+
+    background-color: #03bcd8;
+    color: #fff; 
+ }
+ 

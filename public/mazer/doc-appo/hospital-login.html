@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Vertical 1 Column - Mazer</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/bootstrap.css">
+    <link rel="stylesheet" href="../assets/vendors/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="../assets/css/app.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light ">
+        <div class="container d-block">
+            <!-- <a href="index.html"><i class="bi bi-chevron-left"></i></a> -->
+            <a class="navbar-brand ms-4" href="index.html">
+                <img src="../assets/images/logo/logo.png">
+            </a>
+        </div>
+    </nav>
+    
+
+<div class="container">
+ <div class="row">
+     <div class="col-lg-4 offset-lg-4 col-md-6 offset-md-3">
+        <div class="card mt-2">
+            <div class="card-body">
+                <!-- auth -->
+                <h3 class="">Log in.</h3>
+                <p class="mb-2">Log in with your data that you entered during registration.</p>
+        
+                <form action="index.html">
+                    <div class="form-group position-relative has-icon-left mb-3">
+                        <input type="text" class="form-control" placeholder="Username">
+                        <div class="form-control-icon">
+                            <i class="bi bi-person"></i>
+                        </div>
+                    </div>
+                    <div class="form-group position-relative has-icon-left mb-3">
+                        <input type="password" class="form-control" placeholder="Password">
+                        <div class="form-control-icon">
+                            <i class="bi bi-shield-lock"></i>
+                        </div>
+                    </div>
+                    <div class="form-check d-flex align-items-end">
+                        <input class="form-check-input me-2" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label text-gray-600" for="flexCheckDefault">
+                            Keep me logged in
+                        </label>
+                    </div>
+                    <button class="btn btn-primary btn-block shadow-lg mt-3">Log in</button>
+                </form>
+                <div class="text-center mt-4">
+                    <p class="text-gray-600">Don't have an hospital account? <a href="auth-register.html" class="font-bold">Register Now </a>.</p>
+                    <p><a class="font-bold" href="auth-forgot-password.html">Forgot password?</a>.</p>
+                </div>
+           
+                <!-- auth -->
+            </div>
+        </div>
+     </div>
+ </div>
+</div>
+
+
+</body>
+
+</html>
