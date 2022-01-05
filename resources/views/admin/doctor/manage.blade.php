@@ -1,43 +1,38 @@
-@extends('admin/layout/master') @section('content')
+@extends('admin/admin_layout/master') @section('content')
 
-<div class="main-content">
-    <div class="container-fluid">
-        {{-- Page Header && Breadcrumb Start --}}
-        <div class="page-header">
-            <div class="row align-items-end">
-                <div class="col-lg-8">
-                    <div class="page-header-title">
-                        <i class="ik ik-align-right bg-secondary"></i>
-                        <div class="d-inline">
-                            <h5>Doctor</h5>
-                            <span>All doctor list, and it's settings.</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <nav class="breadcrumb-container" aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item">
-                                <a href="{{ route('admin.dashboard') }}"><i class="ik ik-home"></i></a>
-                            </li>
-                            <li class="breadcrumb-item active" aria-current="page">Doctor</li>
-                        </ol>
-                    </nav>
-                </div>
-            </div>
+<div class="page-title mb-3">
+    <div class="row">
+        <div class="col-12 col-md-6 order-md-1 order-last">
+            <h3>Doctors</h3>
+            <!-- <p>taouhto</p> -->
         </div>
-        {{-- Page Header && Breadcrumb end --}}
+        <div class="col-12 col-md-6 order-md-2 order-first">
+            <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Doctors</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</div>
+
+
+
+
+<section class="section">
 
         <div class="row">
             <div class="col-md-12">
                 <div class="card" style="min-height: 484px">
+
                     <div class="card-header">
-                        <h3>Doctor List</h3>
-                        <div class="card-header-right">
-                            <a class="btn btn-primary" href="{{route('admin.doctor.create')}}">Add New
-                                Doctor</a>
-                        </div>
+                        <h4 class="card-title float-start">Doctor List</h4>
+                        <a class="btn btn-dark  float-end" href="{{route('admin.doctor.create') }}">
+                            Add New Doctor
+                        </a>
                     </div>
+
                     <div class="card-body">
                         <div class="table-responsive">
                             <table class="table">
@@ -54,7 +49,12 @@
                                     <tr>
                                         <th class="text-secondary" scope="row">{{$sl++}}</th>
                                         <td>{{$doctor->doctor_name}}</td>
-                                        <td>{{ $doctor->expertise }} </td>
+                                        <td>
+
+                                            @foreach ($doctor->expertises as $expertise )
+                                                {{$expertise->expertise_name}}
+                                            @endforeach
+                                        </td>
                                     </tr>
                                     @endforeach
                                 </tbody>
@@ -65,7 +65,6 @@
                 </div>
             </div>
         </div>
-    </div>
-</div>
+</section>
 
 @endsection

@@ -1,36 +1,22 @@
-@extends('admin/layout/master')
+{{-- @extends('admin/layout/master') --}}
+@extends('admin/admin_layout/master') @section('content')
 
-@section('content')
-
-<div class="main-content">
-    <div class="container-fluid">
-
-
-{{-- Page Header && Breadcrumb Start --}}
-<div class="page-header">
-    <div class="row align-items-end">
-        <div class="col-lg-8">
-            <div class="page-header-title">
-                <i class="ik ik-align-right bg-secondary"></i>
-                <div class="d-inline">
-                    <h5>Expertise</h5>
-                    <span>All Expertise list.</span>
-                </div>
-            </div>
+<div class="page-title mb-3">
+    <div class="row">
+        <div class="col-12 col-md-6 order-md-1 order-last">
+            <h3>Expertise</h3>
+            <!-- <p>taouhto</p> -->
         </div>
-        <div class="col-lg-4">
-            <nav class="breadcrumb-container" aria-label="breadcrumb">
+        <div class="col-12 col-md-6 order-md-2 order-first">
+            <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item">
-                        <a href="{{ route('admin.dashboard') }}"><i class="ik ik-home"></i></a>
-                    </li>
+                    <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Expertise</li>
                 </ol>
             </nav>
         </div>
     </div>
 </div>
-{{-- Page Header && Breadcrumb end --}}
 
         @if (session('message'))
         <div class="alert alert-{{ session('messageType') }}" role="alert">
@@ -39,12 +25,13 @@
         @endif
 
 
+    <section class="section">
         <div class="card ">
             <div class="card-header">
                 <h3>Expertise List</h3>
                 <div class="card-header-right">
                     <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#formModal">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#formModal">
                         Add New
                     </button>
                 </div>
@@ -79,13 +66,10 @@
 
             </div>
         </div>
+    </section>
 
 
 
-
-
-    </div>
-</div>
 
 <!-- Add New Modal -->
 <!-- Modal -->
@@ -95,7 +79,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="staticBackdropLabel">Add New Expertise</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>

@@ -56,6 +56,6 @@ class DoctorRepository
 
     public function getAllDoctors()
     {
-        return Doctor::paginate(10);
+        return Doctor::with('expertises')->paginate(10);
     }
 }

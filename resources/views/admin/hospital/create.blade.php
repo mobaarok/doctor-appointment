@@ -152,8 +152,8 @@
                                     <div class="form-group">
                                         <label for="Address">Address</label>
                                         <textarea class="form-control" name="address" id="" rows="3">
-                                            {{ old('address') }}
-                                            </textarea>
+                                                                            {{ old('address') }}
+                                                                            </textarea>
                                     </div>
                                     <div class="form-group">
                                         <input class="js-single" type="checkbox" name="is_activated">
