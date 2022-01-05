@@ -1,19 +1,21 @@
 
-</div>
+</div> {{-- page heading class--}}
 
    <footer>
     <div class="footer clearfix mb-0 text-muted">
         <div class="float-start">
-            <p>2021 &copy; Mazer</p>
+            <p>2021 &copy; Rehana</p>
         </div>
         <div class="float-end">
-            <p>Crafted with <span class="text-danger"><i class="bi bi-heart"></i></span> by <a
-                    href="http://ahmadsaugi.com">A. Saugi</a></p>
+            <p>Develop with <span class="text-danger"><i class="bi bi-heart"></i></span> by <a
+                    href="https://mobaarok.github.io">Mobarok Miyazi</a></p>
         </div>
     </div>
 </footer>
-</div>
-</div>
+
+</div> {{--Main class -- }}
+
+</div> {{-- APP div --}}
 <script src="{{ asset('mazer/assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js') }}"></script>
 <script src="{{ asset('mazer/assets/js/bootstrap.bundle.min.js') }}"></script>
 

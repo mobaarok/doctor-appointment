@@ -61,13 +61,6 @@
                             <span> Expertise/Spacalist</span>
                         </a>
                     </li>
-<!--
-                    <li class="sidebar-item">
-                        <a href="" class='sidebar-link'>
-                            <i class="bi bi-grid-fill"></i>
-                            <span></span>
-                        </a>
-                    </li> -->
 
                     <li class="sidebar-item  has-sub">
                         <a href="#" class='sidebar-link'>
